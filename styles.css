@@ -553,47 +553,45 @@ main {
 }
 
 .contact-list li {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.85rem;
+  display: flex;
   align-items: center;
+  gap: 0.5rem;
   padding: 0.55rem 0.65rem;
   border-radius: 0.85rem;
   background: rgba(0, 77, 85, 0.04);
 }
 
 .contact-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  background: #004d55;
-  color: #ffffff;
+  width: 20px;
+  height: 20px;
+  color: #004455;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 20px rgba(0, 77, 85, 0.18);
+  flex-shrink: 0;
 }
 
 .contact-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 .contact-detail-text {
   display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
 }
 
 .contact-label {
-  font-size: 0.8rem;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #00656f;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  color: #004455;
   font-weight: 700;
 }
 
 .contact-value {
+  display: inline;
   margin: 0;
   color: #0f172a;
   font-weight: 600;
