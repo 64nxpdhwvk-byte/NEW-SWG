@@ -91,6 +91,23 @@ body {
     color: #00b3ad;
 }
 
+.nav-links li a.active {
+    color: #00b3ad;
+    position: relative;
+}
+
+.nav-links li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 3px;
+    border-radius: 999px;
+    background: #00b3ad;
+    opacity: 0.22;
+}
+
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -195,6 +212,22 @@ main {
   margin-bottom: 1rem;
 }
 
+.services-hero {
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+}
+
+.services-hero-inner h1 {
+  font-size: clamp(2.2rem, 3vw, 2.8rem);
+  margin-bottom: 0.75rem;
+}
+
+.services-intro {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  max-width: 780px;
+}
+
 .hero-subtitle {
   font-size: 1rem;
   line-height: 1.7;
@@ -286,6 +319,10 @@ main {
   margin-top: 2rem;
 }
 
+.services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
 .card {
   padding: 1.5rem;
   border-radius: 1.25rem;
@@ -295,6 +332,49 @@ main {
 
 .card h3 {
   margin-bottom: 0.5rem;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.whatsapp-booking {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #25d366;
+  color: #ffffff;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, transform 0.15s ease;
+  margin-top: 0.35rem;
+  align-self: flex-start;
+}
+
+.whatsapp-booking:hover {
+  background: #1ebe5a;
+  transform: translateY(-1px);
+}
+
+.whatsapp-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #1ebe5a;
+  color: #ffffff;
+}
+
+.whatsapp-icon svg {
+  width: 16px;
+  height: 16px;
 }
 
 /* Lists & notes */
@@ -354,6 +434,39 @@ main {
   margin-top: 1rem;
 }
 
+.contact-card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0.75rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.contact-list a {
+  color: #004d55;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  color: #00b3ad;
+  text-decoration: underline;
+}
+
+.contact-section .btn-primary {
+  align-self: flex-start;
+}
+
 .whatsapp-float {
   position: fixed;
   right: 22px;
@@ -380,6 +493,34 @@ main {
 .whatsapp-float svg {
   width: 28px;
   height: 28px;
+}
+
+/* Footer */
+.site-footer {
+  background: #0f3c4c;
+  color: #e5eef0;
+  padding: 1.5rem 1.25rem;
+  margin-top: 2rem;
+}
+
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer-contact {
+  font-weight: 600;
 }
 
 /* Responsive */
@@ -481,5 +622,14 @@ main {
   .whatsapp-float svg {
     width: 26px;
     height: 26px;
+  }
+
+  .services-hero {
+    padding-top: 3rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
