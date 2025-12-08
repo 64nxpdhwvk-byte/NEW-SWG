@@ -596,6 +596,13 @@ main {
   font-weight: 600;
 }
 
+.footer-contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #f2fbff;
 .footer-social {
   display: inline-flex;
   align-items: center;
