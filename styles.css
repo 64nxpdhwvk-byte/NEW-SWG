@@ -189,6 +189,18 @@ main {
   margin-bottom: 0.75rem;
 }
 
+.about-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f9fbfc 100%);
+  border: 1px solid #e5e7eb;
+  border-radius: 1.5rem;
+  padding: clamp(1.5rem, 3vw, 2.75rem);
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.08);
+}
+
+.about-card h2 {
+  margin-bottom: 1rem;
+}
+
 /* Hero */
 .hero {
   padding: 5rem 0 4rem;
