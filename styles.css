@@ -350,6 +350,38 @@ main {
   border-color: #111827;
 }
 
+.contact-whatsapp {
+  margin-top: 1rem;
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  z-index: 1200;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.42);
+  opacity: 0.96;
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+}
+
 /* Responsive */
 @media (max-width: 1100px) {
   .navbar {
@@ -436,5 +468,18 @@ main {
   .cards-grid,
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .whatsapp-float {
+    width: 54px;
+    height: 54px;
+    right: 16px;
+    bottom: 16px;
+    transform: translateY(0) scale(0.96);
+  }
+
+  .whatsapp-float svg {
+    width: 26px;
+    height: 26px;
   }
 }
