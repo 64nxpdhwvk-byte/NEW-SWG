@@ -69,6 +69,39 @@ body {
     align-items: center;
 }
 
+.navbar-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid #c7e7e5;
+    background: #e6f6f5;
+    color: #004d55;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+    color: #00b3ad;
+    border-color: #9edbd7;
+    background: #f1fbfa;
+    transform: translateY(-1px);
+}
+
+.facebook-link svg {
+    width: 18px;
+    height: 18px;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -154,7 +187,7 @@ body {
 }
 
 .navbar .cta-button {
-    margin-left: auto;
+    margin-left: 0;
     white-space: nowrap;
 }
 /* Layout */
@@ -561,6 +594,22 @@ main {
 
 .footer-contact {
   font-weight: 600;
+}
+
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.footer-social a {
+  color: #e5eef0;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive */
