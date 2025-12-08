@@ -72,34 +72,31 @@ body {
 .navbar-actions {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     margin-left: auto;
 }
 
 .social-link {
-    width: 40px;
-    height: 40px;
-    border-radius: 999px;
-    border: 1px solid #c7e7e5;
-    background: #e6f6f5;
-    color: #004d55;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 6px;
+    padding: 8px 10px;
+    color: #004d55;
+    font-weight: 600;
     text-decoration: none;
-    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    border-radius: 10px;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
 .social-link:hover {
     color: #00b3ad;
-    border-color: #9edbd7;
-    background: #f1fbfa;
+    background: #e6f6f5;
     transform: translateY(-1px);
 }
 
 .facebook-link svg {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
 }
 
 .nav-links {
@@ -735,12 +732,16 @@ main {
 }
 
 .footer-contact a {
-  color: inherit;
+  color: #c4f3f0;
   text-decoration: none;
+  font-weight: 700;
 }
 
 .footer-contact a:hover {
-  color: #f2fbff;
+  color: #e8ffff;
+  text-decoration: underline;
+}
+
 .footer-social {
   display: inline-flex;
   align-items: center;
@@ -749,11 +750,12 @@ main {
 }
 
 .footer-social a {
-  color: #e5eef0;
+  color: #c4f3f0;
   text-decoration: none;
 }
 
 .footer-social a:hover {
+  color: #e8ffff;
   text-decoration: underline;
 }
 
