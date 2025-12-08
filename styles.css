@@ -284,3 +284,19 @@ main {
     grid-template-columns: 1fr;
   }
 }
+/* Fix header to top */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: #ffffff; /* أو اللون اللي انت مستخدمه */
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.5rem 0;  /* اختياري */
+}
+
+/* حتى لا يختفي المحتوى تحت الهيدر */
+body {
+  padding-top: 80px; /* عدّل الرقم حسب ارتفاع الهيدر عندك */
+}
