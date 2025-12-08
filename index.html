@@ -9,22 +9,29 @@
 <body>
   <!-- HEADER / NAVBAR -->
   <header class="navbar">
-    <div class="logo">
-      <img src="logo.png" alt="SWG Logo">
+    <div class="navbar-left">
+      <div class="logo">
+        <img src="logo.png" alt="SWG Logo">
+      </div>
+      <span class="company-name">Shehawy Wellness Group</span>
     </div>
 
-    <nav>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="navbar-nav">
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#wellness">Wellness</a></li>
-        <li><a href="#aesthetics">Aesthetics</a></li>
+        <li><a href="#wellness">Service</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#store">Store</a></li>
       </ul>
     </nav>
 
-    <a class="cta-button" href="#booking">Book Appointment</a>
+    <a class="cta-button" href="https://wa.me/16467310971?text=Hello%20I%20would%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener">Book Appointment</a>
   </header>
 
   <main>
@@ -38,7 +45,7 @@
           designed around patient comfort and long-term results.
         </p>
         <div class="hero-actions">
-          <a href="#book" class="btn-primary">Book Appointment</a>
+          <a href="https://wa.me/16467310971?text=Hello%20I%20would%20like%20to%20book%20an%20appointment" class="btn-primary" target="_blank" rel="noopener">Book Appointment</a>
           <a href="#wellness" class="btn-outline">Explore Wellness Programs</a>
         </div>
         <div class="hero-mini">
@@ -238,6 +245,25 @@
 
   <script>
     const header = document.querySelector('.navbar');
+    const navToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    const toggleNav = () => {
+      if (!header || !navToggle) return;
+      const isOpen = header.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', isOpen.toString());
+    };
+
+    navToggle?.addEventListener('click', toggleNav);
+
+    navLinks.forEach((link) =>
+      link.addEventListener('click', () => {
+        if (!header || !header.classList.contains('nav-open')) return;
+        header.classList.remove('nav-open');
+        navToggle?.setAttribute('aria-expanded', 'false');
+      })
+    );
+
     const updateHeaderState = () => {
       if (!header) return;
       if (window.scrollY > 10) {
