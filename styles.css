@@ -231,6 +231,58 @@ main {
   margin-bottom: 1rem;
 }
 
+.founders-section {
+  margin-top: 2rem;
+}
+
+.founders-section h3 {
+  font-size: 1.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.founders-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+.founder-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.founder-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 0.5rem auto;
+}
+
+.founder-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.founder-title {
+  font-size: 0.95rem;
+  color: #667085;
+}
+
+.founder-bio {
+  margin-top: 0.35rem;
+  line-height: 1.6;
+  max-width: 32rem;
+}
+
 /* Hero */
 .hero {
   padding: 5rem 0 4rem;
@@ -841,6 +893,7 @@ main {
 
   .section-grid.two-columns,
   .cards-grid,
+  .founders-grid,
   .form-row {
     grid-template-columns: 1fr;
   }
