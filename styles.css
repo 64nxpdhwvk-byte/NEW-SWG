@@ -800,6 +800,13 @@ main {
   opacity: 0.75;
 }
 
+.payment-icons .payment-icon svg {
+  opacity: 1;
+  filter: none;
+  height: 22px;
+  width: auto;
+}
+
 .whatsapp-float {
   position: fixed;
   right: 24px;
@@ -935,8 +942,10 @@ main {
 }
 
 .footer-icons .payment-icon svg {
-  width: 42px;
-  height: 18px;
+  opacity: 1;
+  filter: none;
+  height: 22px;
+  width: auto;
 }
 
 @media (max-width: 600px) {
