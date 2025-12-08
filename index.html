@@ -235,5 +235,20 @@
       </div>
     </section>
   </main>
+
+  <script>
+    const header = document.querySelector('.navbar');
+    const updateHeaderState = () => {
+      if (!header) return;
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled-header');
+      } else {
+        header.classList.remove('scrolled-header');
+      }
+    };
+
+    window.addEventListener('scroll', updateHeaderState, { passive: true });
+    window.addEventListener('load', updateHeaderState);
+  </script>
 </body>
 </html>
