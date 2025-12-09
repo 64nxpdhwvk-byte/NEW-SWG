@@ -791,11 +791,16 @@ main {
 }
 
 .pay-icon {
-  height: 22px;
+  height: 20px;
   width: auto;
   margin-right: 10px;
   vertical-align: middle;
   display: inline-block;
+}
+
+.pay-icon[alt="Amex"],
+.pay-icon[alt="Zelle"] {
+  height: 22px !important;
 }
 
 .payment-icon {
