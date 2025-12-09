@@ -790,6 +790,14 @@ main {
   align-items: center;
 }
 
+.payment-icons img {
+  height: 24px;
+  width: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
 .pay-icon {
   height: 22px;
   width: auto;
@@ -947,6 +955,14 @@ main {
 .footer-icons .payment-icon {
   color: #c4f3f0;
   opacity: 1;
+}
+
+.footer-icons img {
+  height: 20px;
+  width: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .footer-icons .payment-icon svg {
