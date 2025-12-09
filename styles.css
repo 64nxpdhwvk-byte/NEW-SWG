@@ -784,6 +784,14 @@ main {
   color: #0f3c4c;
 }
 
+.payment-text {
+  font-size: 14px;
+  color: #333;
+  margin-left: 6px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
 .payment-icons {
   display: inline-flex;
   gap: 0.4rem;
