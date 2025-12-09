@@ -790,6 +790,14 @@ main {
   align-items: center;
 }
 
+.pay-icon {
+  height: 26px;
+  width: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
 .payment-icon {
   display: inline-flex;
   width: 44px;
