@@ -1354,3 +1354,17 @@ main {
     white-space: normal;
   }
 }
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block !important;
+    color: #000 !important;
+    background: transparent !important;
+    opacity: 1 !important;
+    z-index: 9999 !important;
+  }
+
+  .menu-toggle span {
+    display: block !important;
+    background-color: #000 !important;
+  }
+}
