@@ -1119,3 +1119,43 @@ main {
     white-space: normal;
   }
 }
+/* Mobile polish */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 14px;
+  }
+
+  .navbar-left .company-name {
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  .hero {
+    padding-top: 90px; /* عشان الهيدر مايغطيش العنوان */
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+    line-height: 1.15;
+  }
+
+  .section-inner {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .contact-card {
+    padding: 18px;
+  }
+
+  .footer-contact-row {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-icons {
+    margin-top: 8px;
+  }
+}
