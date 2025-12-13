@@ -1459,31 +1459,40 @@ main {
   gap: 16px;
 }
 
-/* زرار المنيو */
-.nav-toggle {
-  display: none;              /* Desktop: مخفي */
-  width: 44px;
-  height: 44px;
-  border: 0;
-  background: transparent;
-  padding: 10px;
-  cursor: pointer;
-  flex: 0 0 auto;
+/* ===== MOBILE MENU BUTTON ===== */
+.menu-toggle{
+  display:none;
+  width:40px;
+  height:40px;
+  background:none;
+  border:0;
+  padding:8px;
+  cursor:pointer;
 }
 
-/* الثلاث شرط */
-.nav-toggle .bar {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: #0f2f2f;        /* لون الشرط */
-  border-radius: 2px;
-  margin: 4px 0;
+.menu-toggle span{
+  display:block;
+  width:24px;
+  height:3px;
+  background:#0f2f2f;
+  margin:5px 0;
+  border-radius:2px;
 }
 
-/* موبايل */
+/* Mobile only */
 @media (max-width: 900px){
-  .nav-toggle{ display: inline-flex; flex-direction: column; justify-content: center; align-items: center; }
+  .menu-toggle{
+    display:block;
+  }
+
+  .navbar-nav{
+    display:none;
+    width:100%;
+  }
+
+  .navbar-nav.open{
+    display:block;
+  }
 
   /* عشان العنوان/اللوجو ما يزحفش */
   .navbar .header-inner > *{
