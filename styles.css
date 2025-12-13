@@ -1338,3 +1338,19 @@ main {
     width: 34px;
   }
 }
+
+.site-footer .footer-payment-text {
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  margin-left: 6px;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .site-footer .footer-payment-text {
+    font-size: 13px;
+    white-space: normal;
+  }
+}
