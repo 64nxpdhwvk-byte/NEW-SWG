@@ -132,6 +132,31 @@
 
     navToggle?.addEventListener('click', toggleNav);
 
+    // Prevent click from bubbling (so it doesn't instantly close)
+    navToggle?.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    // Close menu when clicking outside header
+    document.addEventListener('click', (e) => {
+      if (!header) return;
+      if (!header.classList.contains('nav-open')) return;
+
+      const clickedInsideHeader = header.contains(e.target);
+      if (!clickedInsideHeader) {
+        header.classList.remove('nav-open');
+        navToggle?.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close menu on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      if (!header || !header.classList.contains('nav-open')) return;
+      header.classList.remove('nav-open');
+      navToggle?.setAttribute('aria-expanded', 'false');
+    });
+
     navLinks.forEach((link) =>
       link.addEventListener('click', () => {
         if (!header || !header.classList.contains('nav-open')) return;
