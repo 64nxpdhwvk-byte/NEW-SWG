@@ -1202,3 +1202,28 @@ main {
     text-align: center;
   }
 }
+/* FORCE mobile menu button visibility */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 9999;
+  }
+
+  .menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 2px;
+  }
+}
