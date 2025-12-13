@@ -14,14 +14,13 @@
         <div class="logo">
           <img src="logo.png" alt="SWG Logo">
         </div>
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <span class="company-name">Shehawy Wellness Group</span>
       </div>
-
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" type="button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
 
       <nav class="navbar-nav">
         <ul class="nav-links">
@@ -322,19 +321,21 @@
 
   <script>
     const header = document.querySelector('.navbar');
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelectorAll('.nav-links a');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.navbar-nav');
+    const navLinks = nav?.querySelectorAll('a') ?? [];
 
     const toggleNav = () => {
-      if (!header || !navToggle) return;
+      if (!header || !menuToggle || !nav) return;
       const isOpen = header.classList.toggle('nav-open');
-      navToggle.setAttribute('aria-expanded', isOpen.toString());
+      nav.classList.toggle('open', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen.toString());
     };
 
-    navToggle?.addEventListener('click', toggleNav);
+    menuToggle?.addEventListener('click', toggleNav);
 
     // Prevent click from bubbling (so it doesn't instantly close)
-    navToggle?.addEventListener('click', (e) => {
+    menuToggle?.addEventListener('click', (e) => {
       e.stopPropagation();
     });
 
@@ -346,7 +347,8 @@
       const clickedInsideHeader = header.contains(e.target);
       if (!clickedInsideHeader) {
         header.classList.remove('nav-open');
-        navToggle?.setAttribute('aria-expanded', 'false');
+        nav?.classList.remove('open');
+        menuToggle?.setAttribute('aria-expanded', 'false');
       }
     });
 
@@ -355,14 +357,16 @@
       if (e.key !== 'Escape') return;
       if (!header || !header.classList.contains('nav-open')) return;
       header.classList.remove('nav-open');
-      navToggle?.setAttribute('aria-expanded', 'false');
+      nav?.classList.remove('open');
+      menuToggle?.setAttribute('aria-expanded', 'false');
     });
 
     navLinks.forEach((link) =>
       link.addEventListener('click', () => {
         if (!header || !header.classList.contains('nav-open')) return;
         header.classList.remove('nav-open');
-        navToggle?.setAttribute('aria-expanded', 'false');
+        nav?.classList.remove('open');
+        menuToggle?.setAttribute('aria-expanded', 'false');
       })
     );
 
