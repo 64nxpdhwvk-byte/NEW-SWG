@@ -256,6 +256,8 @@ body {
     .menu-toggle {
         display: inline-flex;
         margin-left: auto;
+        position: relative;
+        z-index: 1301;
     }
 
     .navbar-actions {
@@ -263,18 +265,30 @@ body {
     }
 
     .navbar-nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
+        position: fixed;
+        inset: 0;
         width: 100%;
-        padding: 14px 18px 18px;
-        background: #ffffff;
-        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
-        display: none;
+        padding: 128px 24px 32px;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        z-index: 1200;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition: opacity 0.28s ease, transform 0.28s ease, visibility 0.28s ease;
+        overflow-y: auto;
     }
 
     .navbar.nav-open .navbar-nav {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
     }
 
     .nav-links {
@@ -306,6 +320,10 @@ body {
         padding: 10px 12px;
         border-radius: 12px;
         background: #e6f6f5;
+    }
+
+    body.nav-open {
+        overflow: hidden;
     }
 }
 /* Layout */
