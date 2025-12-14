@@ -1044,6 +1044,11 @@ main {
     flex: 1;
   }
 
+    position: fixed;
+top: 0;
+width: 100%;
+z-index: 9999;
+background: #ffffff;
   .menu-toggle {
     display: inline-flex;
   }
@@ -1186,317 +1191,64 @@ main {
     margin-top: 8px;
   }
 }
-/* Mobile Menu Button + Header Cleanup */
-@media (max-width: 768px) {
+/* ===== FIX HEADER + MOBILE HAMBURGER (3 BARS) ===== */
 
-  /* زرار المنيو (الهامبرجر) */
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 32px;
-    height: 28px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    margin-left: auto;
-  }
-
-  .menu-toggle span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: #000;
-    border-radius: 2px;
-  }
-
-  /* نخفي الأكشنز من الهيدر */
-  .navbar-actions {
-    display: none;
-  }
-
-  /* نطلعهم جوه المنيو لما تتفتح */
-  .nav-open .navbar-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 16px;
-  }
-
-  .nav-open .navbar-actions a {
-    width: 100%;
-    text-align: center;
-  }
-}
-/* FORCE mobile menu button visibility */
-@media (max-width: 768px) {
-
-  .menu-toggle {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 32px;
-    height: 28px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    margin-left: auto;
-    z-index: 9999;
-  }
-
-  .menu-toggle span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: #000;
-    border-radius: 2px;
-  }
-}
-
-/* Mobile header overrides */
-@media (max-width: 900px) {
-  /* Keep hamburger visible */
-  .menu-toggle {
-    display: flex !important;
-    margin-left: auto;
-    z-index: 9999;
-    opacity: 1;
-    order: 3;
-    position: relative;
-  }
-
-  /* Restructure mobile dropdown */
-  .navbar {
-    align-items: center;
-    flex-wrap: wrap;
-    overflow: visible;
-  }
-
-  .navbar-nav {
-    position: static;
-    width: 100%;
-    padding: 14px 18px 0;
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .navbar.nav-open .navbar-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    background: #ffffff;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
-    border-radius: 0 0 12px 12px;
-    margin-top: 10px;
-  }
-
-  /* Hide actions in header, show inside opened menu */
-  .navbar-actions {
-    display: none;
-  }
-
-  .navbar.nav-open .navbar-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    padding: 0 18px 18px;
-    background: #ffffff;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
-    border-radius: 0 0 12px 12px;
-    border-top: 1px solid #e6e6e6;
-  }
-
-  .navbar.nav-open .navbar-actions a {
-    width: 100%;
-    text-align: center;
-  }
-
-  .facebook-link svg {
-    width: 16px;
-    height: 16px;
-  }
-
-  .payment-icons .pay-icon {
-    height: 16px;
-    width: 34px;
-  }
-
-  .payment-icons .pay-icon[alt="Amex"],
-  .payment-icons .pay-icon[alt="Zelle"] {
-    width: 42px;
-  }
-
-  .payment-icon,
-  .payment-icons .payment-icon svg {
-    height: 16px;
-  }
-
-  .footer-icons img {
-    height: 16px;
-    width: 34px;
-  }
-}
-
-.site-footer .footer-payment-text {
-  color: #ffffff !important;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.4px;
-  margin-left: 6px;
-  white-space: nowrap;
-}
-
-@media (max-width: 768px) {
-  .site-footer .footer-payment-text {
-    font-size: 13px;
-    white-space: normal;
-  }
-}
-@media (max-width: 900px) {
-  .menu-toggle {
-    display: block !important;
-    color: #000 !important;
-    background: transparent !important;
-    opacity: 1 !important;
-    z-index: 9999 !important;
-  }
-
-  .menu-toggle span {
-    display: block !important;
-    background-color: #000 !important;
-  }
-}
-
-/* ===== Mobile menu button + dropdown (fix ugly icon + close behavior) ===== */
-@media (max-width: 900px) {
-  .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 9998;
-  }
-
-  /* Make the hamburger button look proper */
-  .menu-toggle {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border: 1px solid rgba(0,0,0,.12);
-    border-radius: 10px;
-    background: #ffffff;
-    box-shadow: 0 1px 10px rgba(0,0,0,.06);
-  }
-
-  .menu-toggle span {
-    width: 22px;
-    height: 2px;
-    background: #0b3a3f;
-    border-radius: 2px;
-    margin: 3px 0;
-    display: block;
-  }
-
-  /* Hide actions on mobile so they don't mess the layout */
-  .navbar-actions {
-    display: none !important;
-  }
-
-  /* Mobile dropdown menu */
-  .navbar-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 12px;
-    right: 12px;
-    background: #ffffff;
-    border: 1px solid rgba(0,0,0,.08);
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.12);
-    padding: 12px;
-    z-index: 9999;
-  }
-
-  .navbar.nav-open .navbar-nav {
-    display: block;
-  }
-
-  .navbar-nav .nav-links {
-    display: grid;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  .navbar-nav .nav-links a {
-    display: block;
-    padding: 12px 12px;
-    border-radius: 10px;
-  }
-}
-
-/* ===== Mobile Header Fix + Hamburger (3 bars) ===== */
-
-/* الهيدر يثبت مكانه ومش يتحرك */
+/* Header ثابت */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 9999;
-  background: #fff;
+  background: #ffffff;
 }
 
-/* الكونتينر بتاع الهيدر ثابت ومحاذاة صح */
+/* ترتيب الهيدر */
 .navbar .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 72px;          /* ثبّت ارتفاع الهيدر */
-  width: 100%;
+  min-height: 72px;
   padding: 12px 16px;
-  gap: 16px;
 }
 
-/* ===== MOBILE MENU BUTTON ===== */
-.menu-toggle{
-  display:none;
-  width:40px;
-  height:40px;
-  background:none;
-  border:0;
-  padding:8px;
-  cursor:pointer;
+/* زرار المنيو */
+.menu-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 0;
+  padding: 8px;
+  cursor: pointer;
 }
 
-.menu-toggle span{
-  display:block;
-  width:24px;
-  height:3px;
-  background:#0f2f2f;
-  margin:5px 0;
-  border-radius:2px;
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #0f2f2f;
+  margin: 5px 0;
+  border-radius: 2px;
 }
 
 /* Mobile only */
-@media (max-width: 900px){
-  .menu-toggle{
-    display:block;
+@media (max-width: 900px) {
+
+  .menu-toggle {
+    display: block;
   }
 
-  .navbar-nav{
-    display:none;
-    width:100%;
+  .navbar-nav {
+    display: none;
+    width: 100%;
+    background: #ffffff;
   }
 
-  .navbar-nav.open{
-    display:block;
+  .navbar.nav-open .navbar-nav {
+    display: block;
   }
 
-  /* عشان العنوان/اللوجو ما يزحفش */
-  .navbar .header-inner > *{
-    min-width: 0;
+  /* نخفي الأزرار من الهيدر */
+  .navbar-actions {
+    display: none;
   }
 }
