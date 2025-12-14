@@ -194,6 +194,33 @@ body {
     margin-left: 0;
     white-space: nowrap;
 }
+
+/* Desktop navigation layout */
+@media (min-width: 901px) {
+    .navbar {
+        flex-wrap: nowrap;
+    }
+
+    .navbar-nav {
+        position: static;
+        width: auto;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar-actions {
+        display: inline-flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
 /* Layout */
 main {
   max-width: 1120px;
