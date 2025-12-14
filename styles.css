@@ -1246,12 +1246,3 @@ background: #ffffff;
   .navbar-actions {
     display: none;
   }
-}
-@media (min-width: 901px) {
-  .navbar-nav {
-    display: flex !important;
-    position: static !important;
-    width: auto !important;
-    background: transparent !important;
-  }
-}
