@@ -14,6 +14,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    padding-top: 104px;
 }
 
 /* NAVBAR */
@@ -324,6 +325,10 @@ body {
 
     body.nav-open {
         overflow: hidden;
+    }
+
+    body {
+        padding-top: 96px;
     }
 }
 /* Layout */
