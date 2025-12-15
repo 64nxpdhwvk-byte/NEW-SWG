@@ -23,6 +23,10 @@
       </div>
 
         <nav class="navbar-nav">
+          <div class="mobile-nav-header">
+            <span class="mobile-nav-title">Menu</span>
+            <button class="nav-close" type="button" aria-label="Close menu">×</button>
+          </div>
           <ul class="nav-links">
             <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#about">About</a></li>
@@ -211,16 +215,33 @@
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.navbar-nav');
     const navLinks = nav?.querySelectorAll('a') ?? [];
+    const navClose = document.querySelector('.nav-close');
+
+    const closeNav = () => {
+      header?.classList.remove('nav-open');
+      nav?.classList.remove('open');
+      menuToggle?.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+    };
+
+    const openNav = () => {
+      header?.classList.add('nav-open');
+      nav?.classList.add('open');
+      menuToggle?.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('nav-open');
+    };
 
     const toggleNav = () => {
       if (!header || !menuToggle || !nav) return;
-      const isOpen = header.classList.toggle('nav-open');
-      nav.classList.toggle('open', isOpen);
-      menuToggle.setAttribute('aria-expanded', isOpen.toString());
-      document.body.classList.toggle('nav-open', isOpen);
+      if (header.classList.contains('nav-open')) {
+        closeNav();
+      } else {
+        openNav();
+      }
     };
 
     menuToggle?.addEventListener('click', toggleNav);
+    navClose?.addEventListener('click', closeNav);
 
     // Prevent click from bubbling (so it doesn't instantly close)
     menuToggle?.addEventListener('click', (e) => {
@@ -229,15 +250,11 @@
 
     // Close menu when clicking outside header
     document.addEventListener('click', (e) => {
-      if (!header) return;
-      if (!header.classList.contains('nav-open')) return;
+      if (!header || !header.classList.contains('nav-open')) return;
 
       const clickedInsideHeader = header.contains(e.target);
       if (!clickedInsideHeader) {
-        header.classList.remove('nav-open');
-        nav?.classList.remove('open');
-        menuToggle?.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('nav-open');
+        closeNav();
       }
     });
 
@@ -245,19 +262,13 @@
     document.addEventListener('keydown', (e) => {
       if (e.key !== 'Escape') return;
       if (!header || !header.classList.contains('nav-open')) return;
-      header.classList.remove('nav-open');
-      nav?.classList.remove('open');
-      menuToggle?.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('nav-open');
+      closeNav();
     });
 
     navLinks.forEach((link) =>
       link.addEventListener('click', () => {
         if (!header || !header.classList.contains('nav-open')) return;
-        header.classList.remove('nav-open');
-        nav?.classList.remove('open');
-        menuToggle?.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('nav-open');
+        closeNav();
       })
     );
 
