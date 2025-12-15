@@ -21,6 +21,10 @@ body {
     padding-top: var(--navbar-height);
 }
 
+:where([id], section) {
+    scroll-margin-top: var(--navbar-height);
+}
+
 /* NAVBAR */
 .navbar {
     width: 100%;
