@@ -2,18 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sh-wellness.org/</loc>
-    <lastmod>2026-01-03</lastmod>
+    <lastmod>2026-02-21</lastmod>
   </url>
   <url>
     <loc>https://sh-wellness.org/services.html</loc>
-    <lastmod>2026-01-03</lastmod>
+    <lastmod>2026-02-21</lastmod>
   </url>
   <url>
     <loc>https://sh-wellness.org/team.html</loc>
-    <lastmod>2026-01-03</lastmod>
+    <lastmod>2026-02-21</lastmod>
   </url>
   <url>
     <loc>https://sh-wellness.org/insights.html</loc>
-    <lastmod>2026-01-03</lastmod>
+    <lastmod>2026-02-21</lastmod>
   </url>
+
+  <!-- Insights Articles -->
+
+  <url>
+    <loc>https://sh-wellness.org/mobile-iv-therapy.html</loc>
+    <lastmod>2026-02-21</lastmod>
+  </url>
+  <url>
+    <loc>https://sh-wellness.org/medical-supervision.html</loc>
+    <lastmod>2026-02-21</lastmod>
+  </url>
+  <url>
+    <loc>https://sh-wellness.org/mobile-healthcare-south-florida.html</loc>
+    <lastmod>2026-02-21</lastmod>
+  </url>
+  <url>
+    <loc>https://sh-wellness.org/at-home-dental-hygiene.html</loc>
+    <lastmod>2026-02-21</lastmod>
+  </url>
+  <url>
+    <loc>https://sh-wellness.org/florida-healthcare-compliance.html</loc>
+    <lastmod>2026-02-21</lastmod>
+  </url>
+  <url>
+    <loc>https://sh-wellness.org/concierge-wellness-consultation.html</loc>
+    <lastmod>2026-02-21</lastmod>
+  </url>
+
 </urlset>
